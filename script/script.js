@@ -1,5 +1,6 @@
 const buttons = document.querySelector('.buttons');
 const result = document.querySelector('.digits');
+const smallDisplay = document.querySelector('small-display');
 
 function add(a, b) {
     return a + b;    
@@ -84,22 +85,13 @@ function updateDisplay(key) {
             break;
         }
 
-        
         // Operations
-        case "+": {
-            
-            break;
-        }
-        case "-": {
+        case "add":
+        case "subtract":
+        case "multiply":
+        case "divide": {
 
-            break;
-        }
-        case "*": {
-            
-            break;
-        }
-        case "/": {
-            
+            callOperation(key, mainDisplay);
             break;
         }
         case "=": {
